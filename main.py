@@ -6,17 +6,15 @@ import requests
 
 _URL = 'https://www.metaweather.com/api/location/'
 
-# Get the woeid
-location_id = str(
-  requests.get(_URL + 'search/?query=seattle').json()[0]['woeid'])
+def get_woid(location):
+  # Get the woeid
+  location_id = str(
+    requests.get(_URL + 'search/?query=' + location).json()[0]['woeid'])
+  return location_id
 
-# Weather and weather state
-weather = requests.get(_URL + location_id +'/').json()
-weather_state = weather['consolidated_weather'][0]['weather_state_name']
 
 # Log
-print 'location id: %s' % location_id
-print 'weather state: %s' % weather_state
+print 'weather state: %s' % get_woid('seattle')
 
 # TODO(cnishina): Convert to functions and add testing.
 # TODO(cnishina): Add option to write to file.
