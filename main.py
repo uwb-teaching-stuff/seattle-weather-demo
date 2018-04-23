@@ -1,8 +1,4 @@
-import requests
-
-# Documentation metaweather:
-# https://www.metaweather.com/api/
-
+import metaweather
 
 _URL = 'https://www.metaweather.com/api/location/'
 
@@ -27,3 +23,8 @@ def get_location_id():
     return location_id;
 # TODO(cnishina): Convert to functions and add testing.
 # TODO(cnishina): Add option to write to file.
+
+# Sample code with logging
+woeid = metaweather.get_woeid('seattle')
+print 'location id: %s' % woeid
+print 'weather state: %s' % metaweather.get_weather_state(woeid)
