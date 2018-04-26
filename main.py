@@ -17,6 +17,7 @@ weather_state = weather['consolidated_weather'][0]['weather_state_name']
 # Log
 print 'location id: %s' % location_id
 print 'weather state: %s' % weather_state
+print"change to do pull request"
 
 # TODO(cnishina): Convert to functions and add testing.
 # TODO(cnishina): Add option to write to file.
