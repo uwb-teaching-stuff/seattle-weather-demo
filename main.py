@@ -14,6 +14,8 @@ location_id = str(
 weather = requests.get(_URL + location_id +'/').json()
 weather_state = weather['consolidated_weather'][0]['weather_state_name']
 
+print("abcd")
+
 # Log
 print('location id: %s' % location_id)
 print('weather state: %s' % weather_state)
