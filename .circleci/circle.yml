@@ -1,6 +1,0 @@
-machine:
-	python:
-		version: pypy-2.7.12
-test:
-    override:
-        - pytest test_main.py
