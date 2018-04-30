@@ -20,5 +20,10 @@ print('location id: %s' % location_id)
 print('weather state: %s' % weather_state)
 print 'temp: %s' % temp
 
+def get_temp():
+    return temp;
+
+def get_location_id():
+    return location_id;
 # TODO(cnishina): Convert to functions and add testing.
 # TODO(cnishina): Add option to write to file.
