@@ -5,7 +5,10 @@ jobs:
       - image: circleci/python:2.7
     steps:
       - checkout
-      - run: virtualenv venv
-      - run: . venv/bin/activate
-      - run: pip install -r requirements.txt
-      - run: pytest test_main.py -v
+      - run:
+            name: prep venv and run
+            command: |
+                virtualenv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
+                pytest test_main.py -v
