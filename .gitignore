@@ -14,3 +14,10 @@ __pycache__/
 *$py.class
 
 
+.idea
+.Python
+.cache
+bin
+lib
+include
+pip-selfcheck.json
