@@ -16,12 +16,17 @@ weather_state = weather['consolidated_weather'][0]['weather_state_name']
 temp = str(
     weather['consolidated_weather'][0]['the_temp'])
 # Log
+
+
+print "change to do pull request"
+
 print('location id: %s' % location_id)
 print('weather state: %s' % weather_state)
 print 'temp: %s' % temp
 
 def get_temp():
     return temp;
+
 
 def get_location_id():
     return location_id;
